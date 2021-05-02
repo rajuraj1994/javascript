@@ -42,7 +42,13 @@ function emailValidate(){
         displayMsg('email is required','emailmsg','red')
         return false
     }
-    
+    //  ramhhg.ram@
+    else if(!email.match(/^([a-z])[a-z0-9\-\_\.]+\@+(([a-z])+\.)+([a-z])+$/)){
+        displayMsg('invalid email','emailmsg','red')
+        return false
+
+    }
+
     else{
         displayMsg('valid email','emailmsg','green')
         return true
