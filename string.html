@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const text="welcome to Dursikshya to read a javascript programming"
+        document.write(text);
+        document.write('<br>')
+
+        //to count the length of the string use length
+        document.write(text.length)
+
+        document.write('<br>')
+        //to find the position of the string use indexOf
+        document.write(text.indexOf('to'))
+        document.write('<br>')
+        //to find the last position of repeated string use lastIndexOf
+        document.write(text.lastIndexOf('to'))
+        document.write('<br>')
+
+        document.write(text.search('to'))
+        document.write('<br>')
+        //to replace a string with another string use replace
+        document.write(text.replace('javascript','react'))
+        document.write('<br>')
+        //to replace globally
+        document.write(text.replace(/to/gi,'too'))
+        document.write('<br>')
+        //substring->small part of a large string
+        //slice
+        //substring
+        //substr
+
+        document.write(text.slice(0,15)+'.......')
+        document.write('<br>')
+        document.write(text.substring(6,20)+'.....')
+        document.write('<br>')
+        document.write(text.substr(6,20)+'.....')
+        document.write('<br>')
+        //to change to uppercase
+        document.write(text.toUpperCase())
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

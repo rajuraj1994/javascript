@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        .container{
+            height:400px;
+            width:700px;
+            margin: auto;
+        }
+        img{
+            height: 100%;
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+   <img src="images/a.jpg" alt="" id="image">
+
+    </div>
+  <script>
+      let img_array=['a.jpg','b.jpg','c.jpg','d.jpg','e.jpg']
+      const array_length=img_array.length
+      let i=0
+
+      let set=setInterval(slider,5000)
+
+
+      function slider(){
+          i++
+          i=i%array_length
+          document.getElementById('image').src="images/"+img_array[i]
+      }
+
+  </script>
+    
+
+</body>
+</html>
