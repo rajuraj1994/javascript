@@ -68,8 +68,8 @@ function passValidate(){
     //?= -> position doesnot matter matches anywhere in string
     //.   = matches single caharacter
     //*   = matches preceding characters one or more times
-    else if(!pass.match(/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,50}$/)){
-        displayMsg('password must contain at least one upeercase and lowercase letter and one numeric value','passmsg','red')
+    else if(!pass.match(/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[$#@!]).{8,50}$/)){
+        displayMsg('password must contain at least one upeercase and lowercase letter and one numeric value and special character','passmsg','red')
         return false
 
     }
@@ -88,4 +88,14 @@ document.getElementById(id).style.color=color
 
 
 
+}
+
+
+function formValidate(){
+    if (fnameValidate() && lnameValidate() && emailValidate() && passValidate()){
+        return true
+    }
+    else{
+        return false
+    }
 }
