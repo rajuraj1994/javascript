@@ -42,7 +42,7 @@ function emailValidate(){
         displayMsg('email is required','emailmsg','red')
         return false
     }
-    //  ramhhg.ram@
+    
     else if(!email.match(/^([a-z])[a-z0-9\-\_\.]+\@+(([a-z])+\.)+([a-z])+$/)){
         displayMsg('invalid email','emailmsg','red')
         return false
@@ -64,6 +64,14 @@ function passValidate(){
     else if(pass.length<9){
         displayMsg('password must be more than 8 characters','passmsg','red')
         return false
+    }
+    //?= -> position doesnot matter matches anywhere in string
+    //.   = matches single caharacter
+    //*   = matches preceding characters one or more times
+    else if(!pass.match(/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,50}$/)){
+        displayMsg('password must contain at least one upeercase and lowercase letter and one numeric value','passmsg','red')
+        return false
+
     }
     else{
         displayMsg('valid password','passmsg','green')
